@@ -179,6 +179,18 @@ class LinkedList:
                 currentNode = currentNode.nextNode
         
         return (None,None)
+
+    def toList(self):
+        "Converts the Doubly Linked List into standard python list"
+
+        list = []
+        currentNode = self.head
+
+        while currentNode != None:
+            list.append(currentNode.data)
+            currentNode = currentNode.nextNode
+        
+        return list
     
    
     def __str__(self):
@@ -331,6 +343,19 @@ class DoublyLinkedList:
                     currentNode = currentNode.nextNode
 
         return currentNode
+
+    
+    def toList(self):
+        "Converts the Doubly Linked List into standard python list"
+
+        list = []
+        currentNode = self._head
+
+        while currentNode != None:
+            list.append(currentNode.data)
+            currentNode = currentNode.nextNode
+        
+        return list
 
 
     def __str__(self):

@@ -63,6 +63,16 @@ class LinkedList:
         self.tail = None
         self.size = 0
     
+
+    @classmethod
+    def fromList(cls,list):
+        listObj = cls()
+
+        for item in list:
+            listObj.append(item)
+        
+        return listObj
+    
     
     def insertAtStart(self,data):
         "Inserts node at the begining of the Linked List"
@@ -192,6 +202,16 @@ class DoublyLinkedList:
         self._head = None
         self._tail = None
         self._size = 0
+
+    @classmethod
+    def fromList(cls,list):
+        listObj = cls()
+
+        for item in list:
+            listObj.append(item)
+        
+        return listObj
+
 
     @property
     def head(self):
